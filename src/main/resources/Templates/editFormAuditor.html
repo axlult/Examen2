@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-US" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>edit Auditores</title>
+</head>
+<body>
+<h3>Registro de Auditores</h3>
+<div>
+    <form action="#" th:action="@{/editar/{id}(id=${id})}" th:object="${auditorToEdit}" method="post">
+        <label for="nombre">Nombre</label>
+        <input type="text" th:field="*{nombre}"  id="nombre"/><br><br>
+        <label for="ape1">Primer Apellido</label>
+        <input type="text" th:field="*{ape1}"  id="ape1"/><br><br>
+        <label for="ape2">Segundo Apellido</label>
+        <input type="text" th:field="*{ape2}"  id="ape2"/><br><br>
+        <div></div>
+        <label for="direccion">Direcci&oacute;n</label>
+        <input type="text" th:field="*{direccion}"  id="direccion"/><br><br>
+        <label for="tel">Telefono</label>
+        <input type="tel" th:field="*{tel}"  id="tel"/><br><br>
+        <label for="FechaN">Fecha de Nacimiento</label>
+        <input type="date" th:field="*{FechaN}"  id="FechaN"/><br><br>
+        <div></div>
+        <label for="email">Email</label>
+        <input type="text" th:field="*{email}"  id="email"/><br><br>
+        <label for="disponibilidad">Tiene disponibildad para viajar</label>
+        <input type="text" th:field="*{disponibilidad}"  id="disponibilidad"/><br><br>
+        <label for="especialidad">Especialidad</label>
+        <input type="text" th:field="*{especialidad}"  id="especialidad"/><br><br>
+        <div></div>
+        <label for="estado">Ingrese su estado (ACTIVO O INACTIVO)</label>
+        <input type="text" th:field="*{estado}"  id="estado"/><br><br>
+        <input type="submit" value="Guardar Cambios">
+    </form>
+</div><br><br>
+<div>
+    <a href="/">Volver al principal</a>
+</div>
+</body>
+</html>
